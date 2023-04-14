@@ -73,15 +73,50 @@
     
 </header>
 <!--end navigationmenu--><!--start sectionslide-->
-
+<div style="height: max-content;">
+    <video src=""></video>
+</div>
 
 
 <section id="sectionslide">
-     <div class="topwaves"></div> <!--top waves-->
+    <div class="topwaves"></div> <!--top waves-->
     
     <div class="fullwidthbanner-container">
         <div class="fullwidthbanner">
-   
+    
+	<div class="slideshow">
+		<img src="vids/1.png" class="active">
+		<img src="vids/2.png">
+		<img src="vids/3.png">
+	</div>
+
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("slideshow")[0].getElementsByTagName("img");
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.opacity = "0";
+			}
+			slideIndex++;
+			if (slideIndex > slides.length) {
+				slideIndex = 1;
+			}
+			slides[slideIndex - 1].style.opacity = "1";
+			setTimeout(showSlides, 3000); // Change image every 3 seconds
+		}
+	</script>
+
+
+
+             
+
+
+         
+             
+             
   
         </div>
     </div>
